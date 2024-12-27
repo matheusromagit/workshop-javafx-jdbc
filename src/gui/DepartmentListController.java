@@ -20,7 +20,7 @@ import model.services.DepartmentService;
 public class DepartmentListController implements Initializable {
 
 	private DepartmentService service;
-	
+
 	@FXML
 	private TableView<Department> tableViewDepartment;
 
@@ -34,15 +34,16 @@ public class DepartmentListController implements Initializable {
 	private Button btNew;
 
 	private ObservableList<Department> obsList;
-	
+
 	@FXML
 	public void onBtNewAction() {
-		System.out.println("On Bt");
+		System.out.println("onBtNewAction");
 	}
 
 	public void setDepartmentService(DepartmentService service) {
 		this.service = service;
 	}
+
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
 		initializeNodes();
@@ -64,5 +65,4 @@ public class DepartmentListController implements Initializable {
 		obsList = FXCollections.observableArrayList(list);
 		tableViewDepartment.setItems(obsList);
 	}
-	
 }
