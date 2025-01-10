@@ -33,3 +33,6 @@ nbdist/
 
 # Eclipse
 .settings/
+
+#Eclipse
+.settings/
